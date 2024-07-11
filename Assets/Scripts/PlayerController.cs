@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
+    public static UnityEvent DieEvent = new UnityEvent();
+    [SerializeField] private int maxHp = 10;
+
+    private int currentHp;
 
     private void Start()
     {
-        
+        currentHp = maxHp;
     }
 
-    private void Update()
+    public void ReceiveDamage(int amount)
     {
-        transform.position = transform.position + new Vector3(1,0,0);
-
-        gameObject.tag = "Player";
-        gameObject.layer = 1;
-
-
+        currentHp -= amount;
+        if(currentHp <= 0)
+        {
+            Die();
+        }
     }
 
+    private void Die()
+    {
+        gameObject.SetActive(false);
+        DieEvent.Invoke();
+    }
 }
+
