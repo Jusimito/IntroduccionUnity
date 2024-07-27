@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     {
         while (gameStarted)
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(secondsBetweenBullets);
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
     }
 
