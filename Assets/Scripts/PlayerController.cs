@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+        UIManager.Instance.UpdateHpBar((float)currentHp / maxHp);
     }
 
     private void Die()

@@ -13,6 +13,11 @@ public class HpBar : MonoBehaviour
     private float currentValue;
     private int colorIndex = -1;
 
+    private void Start()
+    {
+        SetValue(1);
+    }
+
     public void SetValue(float newValue)
     {
         currentValue = newValue;
@@ -22,7 +27,7 @@ public class HpBar : MonoBehaviour
 
     private void UpdateVisuals()
     {
-        for(int i = values.Count; i >= 0; i--)
+        for(int i = values.Count - 1; i >= 0; i--)
         {
             if(currentValue >= values[i])
             {
