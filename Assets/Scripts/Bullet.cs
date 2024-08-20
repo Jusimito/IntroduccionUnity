@@ -27,9 +27,12 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Vector2.Distance(currentPosition, playerController.transform.position) <= config.CollisionThreshold)
+        if (playerController != null)
         {
-            DoDamage();
+            if (Vector2.Distance(currentPosition, playerController.transform.position) <= config.CollisionThreshold)
+            {
+                DoDamage();
+            }
         }
     }
 
