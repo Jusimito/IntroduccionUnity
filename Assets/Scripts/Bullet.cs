@@ -22,7 +22,10 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        if (GameManager.Instance.GameStarted)
+        {
+            Move();
+        }
     }
 
     private void FixedUpdate()
@@ -38,13 +41,20 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator DestroyAfterSeconds()
     {
-        yield return new WaitForSeconds(config.Lifetime);
-        Die();
+        while (true)
+        {
+            yield return new WaitForSeconds(config.Lifetime);
+            if (GameManager.Instance.GameStarted)
+            {
+                Die();
+            }
+        }
     }
 
 
     private void Die()
     {
+        StopAllCoroutines();
         Destroy(gameObject);
     }
 

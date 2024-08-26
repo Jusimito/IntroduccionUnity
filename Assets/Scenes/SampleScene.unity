@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 1443747196}
+  timeCounter: {fileID: 1364776674}
 --- !u!1 &343590564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364776673}
+  - component: {fileID: 1364776674}
   m_Layer: 5
   m_Name: TimeCounterParent
   m_TagString: Untagged
@@ -1041,6 +1043,19 @@ RectTransform:
   m_AnchoredPosition: {x: -64, y: -32}
   m_SizeDelta: {x: 250, y: 108}
   m_Pivot: {x: 1, y: 1}
+--- !u!114 &1364776674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364776672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a9fe6c5dc1c664e823562a9abb042b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 847203720}
 --- !u!1 &1443747194
 GameObject:
   m_ObjectHideFlags: 0

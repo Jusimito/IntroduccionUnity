@@ -28,7 +28,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(moveAmount * movementSpeed * Time.deltaTime);
+        if (GameManager.Instance.GameStarted)
+        {
+            transform.Translate(moveAmount * movementSpeed * Time.deltaTime);
+        }
     }
 
     public void ReceiveDamage(int amount)

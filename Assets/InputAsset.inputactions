@@ -15,13 +15,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Aim",
-                    "type": "Value",
-                    "id": "28a31579-4f71-4d02-9470-8dae8f9d7523",
-                    "expectedControlType": "Delta",
+                    "name": "TogglePause",
+                    "type": "PassThrough",
+                    "id": "12d1bee3-266a-4339-9541-09e31e17c36c",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -93,12 +93,12 @@
                 },
                 {
                     "name": "",
-                    "id": "77183cf0-7b70-42cf-8b61-60009077dbd6",
-                    "path": "<Mouse>/delta",
+                    "id": "7459af2c-e249-4a90-8f66-9b1038840896",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Aim",
+                    "groups": "",
+                    "action": "TogglePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

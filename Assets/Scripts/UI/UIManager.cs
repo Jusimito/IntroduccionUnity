@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] HpBar hpBar;
     [SerializeField] TimeCounter timeCounter;
+    [SerializeField] CanvasGroup pauseMenu;
 
     private static UIManager instance;
     public static UIManager Instance => instance;
@@ -30,5 +31,10 @@ public class UIManager : MonoBehaviour
     public void UpdateTimeCounter(float time)
     {
         timeCounter.UpdateCounter(time);
+    }
+
+    public void TogglePauseMenu(bool toggle)
+    {
+        pauseMenu.gameObject.SetActive(toggle);
     }
 }

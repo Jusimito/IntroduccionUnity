@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,25 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => instance;
 
     private bool gameStarted;
+    public bool GameStarted => gameStarted;
     private float timePlaying = 0.0f;
+
+    public void OnTogglePause(InputAction.CallbackContext context)
+    {
+        if (context.ReadValueAsButton())
+        {
+            gameStarted = !gameStarted;
+            if (!gameStarted)
+            {
+                StopAllCoroutines();
+            }
+            else
+            {
+                StartCoroutine(SpawnBullets());
+            }
+            UIManager.Instance.TogglePauseMenu(!gameStarted);
+        }
+    }
 
     private void Awake()
     {
