@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => instance;
 
     private bool gameStarted;
+    private float timePlaying = 0.0f;
 
     private void Awake()
     {
@@ -27,6 +28,15 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
         StartCoroutine(SpawnBullets());
         PlayerController.DieEvent.AddListener(() => gameStarted = false);
+    }
+
+    private void FixedUpdate()
+    {
+        if (gameStarted)
+        {
+            timePlaying += Time.fixedDeltaTime;
+            UIManager.Instance.UpdateTimeCounter(timePlaying);
+        }
     }
 
     private IEnumerator SpawnBullets()

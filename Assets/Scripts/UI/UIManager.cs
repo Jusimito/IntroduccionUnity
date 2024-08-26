@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] HpBar hpBar;
+    [SerializeField] TimeCounter timeCounter;
 
     private static UIManager instance;
     public static UIManager Instance => instance;
@@ -24,5 +25,10 @@ public class UIManager : MonoBehaviour
     public void UpdateHpBar(float currentHp)
     {
         hpBar.SetValue(currentHp);
+    }
+
+    public void UpdateTimeCounter(float time)
+    {
+        timeCounter.UpdateCounter(time);
     }
 }
