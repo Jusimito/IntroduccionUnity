@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,5 +39,9 @@ public class HpBar : MonoBehaviour
 
         fill.color = colors[colorIndex];
         fill.fillAmount = currentValue;
+        if (currentValue != 1)
+        {
+            ((RectTransform)fill.transform).DOShakePosition(0.35f, 10);
+        }
     }
 }

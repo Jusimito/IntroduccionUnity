@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private BulletConfig config;
+    [SerializeField] private SpriteRenderer renderer;
 
     private Vector2 direction;
     private Vector2 currentPosition;
@@ -17,6 +19,8 @@ public class Bullet : MonoBehaviour
         direction = Vector2.right;
         currentPosition = transform.position;
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+        renderer.DOColor(Color.black, config.Lifetime - 1).SetEase(Ease.InSine);
         StartCoroutine(DestroyAfterSeconds());
     }
 

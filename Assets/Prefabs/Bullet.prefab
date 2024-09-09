@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: bc08e191b8ba5df4b906909dbe3d15ec, type: 2}
+  renderer: {fileID: 6976657841696701877}

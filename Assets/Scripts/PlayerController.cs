@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public static UnityEvent DieEvent = new UnityEvent();
     [SerializeField] private int maxHp = 10;
     [SerializeField] private float movementSpeed = 10;
-    [SerializeField] private SpriteRenderer renderer;
 
     [SerializeField] private float jumpMaxHeight = 2f;
     [SerializeField] private AnimationCurve jumpCurve;
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         if (GameManager.Instance.GameStarted)
         {
             currentPosition = transform.position;
-            targetPosition = currentPosition + (new Vector3(moveAmount.x, moveAmount.y, 0) * movementSpeed * Time.deltaTime);
+            targetPosition = currentPosition + (new Vector3(moveAmount.x, 0, 0) * movementSpeed * Time.deltaTime);
             transform.position = Vector3.Lerp(currentPosition, targetPosition, 0.5f);
         }
     }

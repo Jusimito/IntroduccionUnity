@@ -242,17 +242,6 @@ MonoBehaviour:
   hpBar: {fileID: 1443747196}
   timeCounter: {fileID: 1364776674}
   pauseMenu: {fileID: 0}
---- !u!114 &133613662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-  m_PrefabInstance: {fileID: 7616290352302248586}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 860465c986baa3442b3bec580dd782ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &343590564
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,11 +588,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &575371601 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1888204435886987934, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-  m_PrefabInstance: {fileID: 7616290352302248586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,85 +1216,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
-      value: 12d1bee3-266a-4339-9541-09e31e17c36c
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: a06d7f97-c1a3-4918-a8bd-40cc612ba421
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
-      value: Player/TogglePause[/Keyboard/escape]
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: Player/Jump[/Keyboard/space]
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 133613662}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnJump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2548267203284066540, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5429700522886987847, guid: 70885977b616cd0429e275fcfed00089, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: renderer
-      value: 
-      objectReference: {fileID: 575371601}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].inSlope
-      value: 0.8419082
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].outSlope
-      value: 0.8419082
-      objectReference: {fileID: 0}
-    - target: {fileID: 7663149570948765737, guid: 70885977b616cd0429e275fcfed00089, type: 3}
-      propertyPath: jumpCurve.m_Curve.Array.data[0].outWeight
-      value: 0.04813806
       objectReference: {fileID: 0}
     - target: {fileID: 7916029266145266718, guid: 70885977b616cd0429e275fcfed00089, type: 3}
       propertyPath: m_LocalPosition.x
